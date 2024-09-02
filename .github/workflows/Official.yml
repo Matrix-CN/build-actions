@@ -190,8 +190,6 @@ jobs:
       uses: ZZM365-CN/ssh2actions@main
       with:
         mode: ngrok
-      if: (github.event.inputs.ssh == 'true' && github.event.inputs.ssh  != 'false') || contains(github.event.action, 'ssh')
-      env:
         # After sign up on the https://ngrok.com
         # You can find this token here: https://dashboard.ngrok.com/auth/your-authtoken
         NGROK_TOKEN: ${{ secrets.NGROK_TOKEN }}
